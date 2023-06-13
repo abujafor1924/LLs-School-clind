@@ -27,6 +27,10 @@ const Class = () => {
       });
   };
 
+  const handleadded = (pd) => {
+    console.log(pd);
+  };
+
   return (
     <div>
       {/* <h1>Class student : {users.length}</h1> */}
@@ -73,7 +77,13 @@ const Class = () => {
                   </button>
                 </td>
                 <th>
-                  <Link to={"/dashboard/pay"} className="btn btn-primary">
+                  <Link
+                    onClick={() => {
+                      handleadded(pd);
+                    }}
+                    to={"/dashboard/pay"}
+                    className="btn btn-primary"
+                  >
                     Payment
                   </Link>
                 </th>

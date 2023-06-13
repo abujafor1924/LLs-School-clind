@@ -13,7 +13,7 @@ const PopularClass = () => {
   return (
     <div>
       <h1 className="text-4xl font-bold">Popular Class</h1>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid md:grid-cols-4 gap-4 mx-auto">
         {data.map((pd) => (
           <div key={pd._id} className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">

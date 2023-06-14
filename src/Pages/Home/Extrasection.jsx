@@ -4,7 +4,7 @@ const Extrasection = () => {
   return (
     <Fade>
       <div className="py-6">
-        <h1 className="text-4xl font-bold my-4">Picture Gelary</h1>
+        <h1 className="text-4xl font-bold my-4">Galaryes</h1>
         <div className="grid md:grid-cols-3 gap-4">
           <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">

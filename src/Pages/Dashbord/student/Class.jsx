@@ -33,10 +33,8 @@ const Class = () => {
 
   return (
     <div>
-      {/* <h1>Class student : {users.length}</h1> */}
       <div className="overflow-x-auto">
         <table className="table">
-          {/* head */}
           <thead>
             <tr>
               <th>#</th>
@@ -47,7 +45,6 @@ const Class = () => {
             </tr>
           </thead>
           <tbody>
-            {/* row 1 */}
             {users.map((pd, index) => (
               <tr key={pd._id}>
                 <th>{index + 1}</th>

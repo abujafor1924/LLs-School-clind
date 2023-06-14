@@ -6,7 +6,7 @@ const Instructor = () => {
   const { data: users = [] } = useQuery({
     queryFn: async () => {
       const res = await axiosSecure("/users/instructor");
-      // console.log("res from axios", res);
+
       return res.data;
     },
   });

@@ -4,19 +4,19 @@ import useAxiusSecure from "../Hook/useAxiusSecure";
 
 const CheckoutForm = ({ price }) => {
   //   console.log(price.price);
-  const { prices } = price;
+  // const { prices } = price;
   const stripe = useStripe();
   const [cardError, setcardError] = useState();
   const elements = useElements();
   const [axiosSecure] = useAxiusSecure();
   const [clindSecret, setClindSecret] = useState("");
 
-  //   useEffect(() => {
-  //     axiosSecure.post("/create-payment-intent", { prices }).then((res) => {
-  //       console.log(res.data.clientSecret);
-  //       setClindSecret(res.data.clientSecret);
-  //     });
-  //   }, []);
+  useEffect(() => {
+    axiosSecure.post("/create-payment-intent", { price }).then((res) => {
+      console.log(res.data.clientSecret);
+      setClindSecret(res.data.clientSecret);
+    });
+  }, [price, axiosSecure]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();

@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="footer items-center p-4 bg-neutral text-neutral-content">
       <div className="items-center grid-flow-col">
         <h1 className="text-4xl font-bold text-sky-800">LLC</h1>
-        <p>Copyright © 2023 - All right reserved</p>
+        <p>Copyright © 2024 - All right reserved</p>
       </div>
       <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
         <a>

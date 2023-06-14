@@ -23,7 +23,6 @@ const Class = () => {
           refetch();
           alert("remove Classes");
         }
-        // console.log(data);
       });
   };
 

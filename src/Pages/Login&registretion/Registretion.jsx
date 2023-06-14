@@ -27,7 +27,7 @@ const Registretion = () => {
             email: data.email,
             photo: logdUser.photoURL,
           };
-          fetch("http://localhost:5000/users", {
+          fetch("https://assingmrnt-12-server.vercel.app/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",

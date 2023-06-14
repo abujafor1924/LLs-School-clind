@@ -12,7 +12,7 @@ const AddClasses = () => {
     //     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addDatas", {
+    fetch("https://assingmrnt-12-server.vercel.app/addDatas", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

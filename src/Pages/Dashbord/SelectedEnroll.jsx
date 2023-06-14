@@ -12,7 +12,7 @@ const SelectedEnroll = () => {
   });
 
   const handleAdmin = (user) => {
-    fetch(`http://localhost:5000/users/admin/${user._id}`, {
+    fetch(`https://assingmrnt-12-server.vercel.app/users/admin/${user._id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())
@@ -24,9 +24,12 @@ const SelectedEnroll = () => {
       });
   };
   const handleInstructor = (user) => {
-    fetch(`http://localhost:5000/users/instructor/${user._id}`, {
-      method: "PATCH",
-    })
+    fetch(
+      `https://assingmrnt-12-server.vercel.app/users/instructor/${user._id}`,
+      {
+        method: "PATCH",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {

@@ -12,9 +12,12 @@ const SelectedCls = () => {
   });
 
   const handleapproved = (pd) => {
-    fetch(`http://localhost:5000/addDatas/approved/${pd._id}`, {
-      method: "PATCH",
-    })
+    fetch(
+      `https://assingmrnt-12-server.vercel.app/addDatas/approved/${pd._id}`,
+      {
+        method: "PATCH",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {
@@ -24,7 +27,7 @@ const SelectedCls = () => {
       });
   };
   const handleDenai = (pd) => {
-    fetch(`http://localhost:5000/addDatas/denai/${pd._id}`, {
+    fetch(`https://assingmrnt-12-server.vercel.app/addDatas/denai/${pd._id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())

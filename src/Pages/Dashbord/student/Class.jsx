@@ -14,7 +14,7 @@ const Class = () => {
 
   const handleDelete = (item) => {
     // console.log(item._id);
-    fetch(`http://localhost:5000/enroll/${item._id}`, {
+    fetch(`https://assingmrnt-12-server.vercel.app/enroll/${item._id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

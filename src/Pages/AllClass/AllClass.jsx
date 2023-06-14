@@ -52,7 +52,7 @@ const AllClass = () => {
                   onClick={() => handleAddToEnroll(pd)}
                   className="btn btn-primary"
                 >
-                  Buy Now
+                  Enroll Now
                 </button>
               </div>
             </div>

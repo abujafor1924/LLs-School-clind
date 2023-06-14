@@ -6,7 +6,7 @@ const SelectedEnroll = () => {
   const { refetch, data: users = [] } = useQuery({
     queryFn: async () => {
       const res = await axiosSecure("/users");
-      // console.log("res from axios", res);
+
       return res.data;
     },
   });

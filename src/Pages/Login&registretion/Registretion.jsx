@@ -107,13 +107,7 @@ const Registretion = () => {
               <label className="label">
                 <span className="label-text">confirm Password</span>
               </label>
-              {/* <input
-                type="password"
-                placeholder="confirm"
-                name="confirm"
-                {...register("confirm")}
-                className="input input-bordered"
-              /> */}
+
               <input
                 className="input-field"
                 type="password"

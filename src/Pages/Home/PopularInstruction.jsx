@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const PopularInstruction = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("https://assingmrnt-12-server.vercel.app/users")
+    fetch("http://localhost:5000/users")
       .then((res) => res.json())
       .then((data) => {
         const insteuctor = data.filter((item) => item.role === "instructor");

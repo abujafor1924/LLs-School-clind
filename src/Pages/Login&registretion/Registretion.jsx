@@ -103,7 +103,7 @@ const Registretion = () => {
                 </p>
               )}
             </div>
-            <div className="form-control">
+            {/* <div className="form-control">
               <label className="label">
                 <span className="label-text">confirm Password</span>
               </label>
@@ -118,7 +118,7 @@ const Registretion = () => {
                 })}
               ></input>
               <p>{errors.cpassword?.message}</p>
-            </div>
+            </div> */}
             <div className="form-control">
               <label className="label">
                 <span className="label-text">picture</span>

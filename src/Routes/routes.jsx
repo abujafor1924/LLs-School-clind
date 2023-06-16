@@ -14,6 +14,7 @@ import StudentEnroll from "../Pages/Dashbord/student/StudentEnroll";
 import Instructor from "../Pages/Instructor/Instructor";
 import AllClass from "../Pages/AllClass/AllClass";
 import Payment from "../Pages/Dashbord/student/Payment";
+import Protective from "./Protective";
 
 const routes = createBrowserRouter([
   {
@@ -66,7 +67,11 @@ const routes = createBrowserRouter([
       },
       {
         path: "studentclass",
-        element: <Class></Class>,
+        element: (
+          <Protective>
+            <Class></Class>
+          </Protective>
+        ),
       },
       {
         path: "pay",

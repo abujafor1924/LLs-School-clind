@@ -32,6 +32,19 @@ const Class = () => {
 
   return (
     <div>
+      <div className="flex justify-evenly">
+        <h1 className="text-4xl">Add: {users.length}</h1>
+        <h1 className="text-4xl">Price : ${users.length}</h1>
+        <Link
+          onClick={() => {
+            handleadded();
+          }}
+          to={"/dashboard/pay"}
+          className="btn btn-primary mx-4"
+        >
+          Payment
+        </Link>
+      </div>
       <div className="overflow-x-auto">
         <table className="table">
           <thead>
@@ -40,7 +53,6 @@ const Class = () => {
               <th>Image& Name</th>
               <th>Price</th>
               <th>Remove</th>
-              <th>Enroll</th>
             </tr>
           </thead>
           <tbody>
@@ -72,17 +84,6 @@ const Class = () => {
                     Remove
                   </button>
                 </td>
-                <th>
-                  <Link
-                    onClick={() => {
-                      handleadded(pd);
-                    }}
-                    to={"/dashboard/pay"}
-                    className="btn btn-primary"
-                  >
-                    Payment
-                  </Link>
-                </th>
               </tr>
             ))}
           </tbody>

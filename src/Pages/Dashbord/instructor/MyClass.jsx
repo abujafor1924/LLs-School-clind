@@ -1,11 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiusSecure from "../../../Components/Hook/useAxiusSecure";
+import useAuth from "../../../Components/Hook/useAuth";
 
 const MyClass = () => {
+  const { user } = useAuth();
   const [axiosSecure] = useAxiusSecure();
   const { data: users = [] } = useQuery({
     queryFn: async () => {
-      const res = await axiosSecure.get(`allClass?email${users?.email}`);
+      const res = await axiosSecure.get(`allClass?email=${user?.email}`);
       return res.data;
     },
   });
@@ -22,8 +24,6 @@ const MyClass = () => {
                 <th>#</th>
                 <th>Images</th>
                 <th>Status</th>
-                <th>Favorite Color</th>
-                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -46,10 +46,6 @@ const MyClass = () => {
                   <td>
                     <p>{pd.role}</p>
                   </td>
-                  <td>Purple</td>
-                  <th>
-                    <button className="btn btn-ghost btn-xs">details</button>
-                  </th>
                 </tr>
               ))}
             </tbody>

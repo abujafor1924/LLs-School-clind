@@ -5,7 +5,7 @@ const AllClass = () => {
   const [datas, setData] = useState([]);
   const { user } = useContext(AuthContext);
   useEffect(() => {
-    fetch("https://assingmrnt-12-server.vercel.app/allClass")
+    fetch("http://localhost:5000/allClass")
       .then((res) => res.json())
       .then((data) => {
         const approved = data.filter((item) => item.role === "approved");
@@ -15,8 +15,8 @@ const AllClass = () => {
 
   const handleAddToEnroll = (item) => {
     console.log(item);
-    if (user) {
-      fetch("https://assingmrnt-12-server.vercel.app/enroll", {
+    if (user || user.email) {
+      fetch(`http://localhost:5000/enroll`, {
         method: "POST",
         headers: {
           "content-type": "application/json",

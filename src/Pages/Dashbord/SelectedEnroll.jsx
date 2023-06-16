@@ -19,7 +19,6 @@ const SelectedEnroll = () => {
       .then((data) => {
         if (data.modifiedCount) {
           refetch();
-          alert("admin added");
         }
       });
   };
@@ -34,7 +33,6 @@ const SelectedEnroll = () => {
       .then((data) => {
         if (data.modifiedCount) {
           refetch();
-          alert("added Instructor");
         }
       });
   };

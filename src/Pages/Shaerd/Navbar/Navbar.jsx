@@ -1,9 +1,20 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Components/AuthProvider/AuthProvider";
+import useAxiusSecure from "../../../Components/Hook/useAxiusSecure";
+import { useQuery } from "@tanstack/react-query";
 
 const Navbar = () => {
   const { user, logdOut } = useContext(AuthContext);
+
+  const [axiosSecure] = useAxiusSecure();
+  const { data: users = [] } = useQuery({
+    queryFn: async () => {
+      const res = await axiosSecure("/enroll");
+
+      return res.data;
+    },
+  });
 
   const handleLogOut = () => {
     logdOut()
@@ -21,10 +32,20 @@ const Navbar = () => {
       <li>
         <Link to={"/allClass"}>Classes</Link>
       </li>
+      <li>
+        <Link to="/dashboard/studentclass">
+          <button className="btn gap-2">
+            Enroll
+            <div className="badge badge-secondary">+{users?.length || 0}</div>
+          </button>
+        </Link>
+      </li>
       {user ? (
-        <li>
-          <Link to={"/dashboard"}>Dashboard</Link>
-        </li>
+        <>
+          <li>
+            <Link to={"/dashboard"}>Dashboard</Link>
+          </li>
+        </>
       ) : (
         ""
       )}

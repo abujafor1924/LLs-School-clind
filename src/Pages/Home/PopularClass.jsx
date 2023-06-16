@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const PopularClass = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("https://assingmrnt-12-server.vercel.app/allClass")
+    fetch("http://localhost:5000/allClass")
       .then((res) => res.json())
       .then((data) => {
         const approved = data.filter((item) => item.role === "approved");
